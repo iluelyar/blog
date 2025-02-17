@@ -193,7 +193,7 @@ function updateVue(vueTemplate, vueScript, vueStyle, iframe) {
             <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
             <style>
                 body {
-                    color: #fff;
+                    color: #000;
                 }
                 ::-webkit-scrollbar {
                     display: none;
@@ -204,7 +204,7 @@ function updateVue(vueTemplate, vueScript, vueStyle, iframe) {
                     display: block;
                 }
                 body::-webkit-scrollbar-track {
-                    background: #fff2;
+                    background: #f5f5f5;
                     border-radius: 10px;
                 }
                 body::-webkit-scrollbar-thumb {
@@ -235,7 +235,7 @@ function updateContent(html, css, js, iframe) {
         <head>
             <style>
                 body {
-                    color: #fff;
+                    color: #000;
                 }
                 ::-webkit-scrollbar {
                     display: none;
@@ -246,7 +246,7 @@ function updateContent(html, css, js, iframe) {
                     display: block;
                 }
                 body::-webkit-scrollbar-track {
-                    background: #fff2;
+                    background: #f5f5f5;
                     border-radius: 10px;
                 }
                 body::-webkit-scrollbar-thumb {

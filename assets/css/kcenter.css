@@ -1,10 +1,10 @@
 .kcenter-header {
   height: 220px;
   position: relative;
-  padding: var(--sp-16);
-  background: var(--bgi) center/contain;
-  border-radius: var(--sp-16);
-  border: var(--border);
+  padding: 16px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #000;
   display: flex;
   flex-direction: column;
 }
@@ -16,50 +16,50 @@
 }
 .header-nav-item {
   max-width: 120px;
-  padding: var(--padding);
-  border-radius: var(--sp-8);
+  padding: 4px 8px;
+  border-radius: 8px;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
 .header-nav-turn {
-  border-radius: var(--sp-8);
+  border-radius: 8px;
   position: relative;
   transition: all 0.5s ease;
 }
 .header-nav-item:hover,
 .header-nav-turn:hover {
-  background-color: var(--color2);
+  background-color: #f5f5f5;
 }
 
 .turn-icon {
-  width: calc(var(--sp-24) + 2px);
-  height: calc(var(--sp-24) + 2px);
+  width: calc(24px + 2px);
+  height: calc(24px + 2px);
   display: flex;
 }
 .turn-icon img {
-  width: var(--sp-16);
-  height: var(--sp-16);
+  width: 16px;
+  height: 16px;
   margin: auto;
 }
 .turn-result {
   width: 100px;
   max-height: 104px;
-  padding: calc(var(--sp-8) / 2) 0;
+  padding: calc(8px / 2) 0;
   position: absolute;
-  top: calc(var(--sp-24) + 4px);
-  border-radius: var(--sp-8);
-  background-color: var(--color2);
+  top: calc(24px + 4px);
+  border-radius: 8px;
+  background-color: #f5f5f5;
   overflow: auto;
   display: none;
 }
 .turn-result .turn-item,
 .turn-result .turn-item1 {
   position: relative;
-  height: var(--sp-24);
-  padding: 0 var(--sp-8);
+  height: 24px;
+  padding: 0 8px;
   font-size: 0.85em;
-  line-height: var(--sp-24);
+  line-height: 24px;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -67,7 +67,7 @@
 }
 .turn-result .turn-item:hover,
 .turn-result .turn-item1:hover {
-  background-color: var(--color3);
+  background-color: #fff5;
   -webkit-backdrop-filter: blur(1px);
   backdrop-filter: blur(1px);
 }
@@ -76,67 +76,67 @@
   margin-top: auto;
 }
 .header-data div {
-  padding: var(--padding);
-  border-radius: var(--sp-8);
+  padding: 4px 8px;
+  border-radius: 8px;
   display: inline-block;
 }
 .header-data div:hover {
-  background-color: var(--color2);
+  background-color: #f5f5f5;
 }
 
 .kcenter-main {
   width: 100%;
-  margin-top: var(--sp-24);
+  margin-top: 24px;
   display: flex;
   flex-direction: column;
-  gap: var(--sp-16);
+  gap: 16px;
 }
 .kcenter-main h1 {
   text-align: center;
 }
 .kcenter-main .kcode p {
-  margin: var(--sp-8) 0;
+  margin: 8px 0;
   font-weight: bold;
 }
 .kcenter-main .kcode .openBtns {
-  margin-bottom: var(--sp-8);
+  margin-bottom: 8px;
   display: flex;
-  gap: var(--sp-8);
+  gap: 8px;
 }
 .kcenter-main .kcode .openBtns div {
-  padding: var(--padding);
-  border-radius: var(--sp-8);
-  background-color: var(--color2);
+  padding: 4px 8px;
+  border-radius: 8px;
+  background-color: #f5f5f5;
   -webkit-backdrop-filter: blur(0px);
   backdrop-filter: blur(0px);
   transition: all 0.5s ease;
   cursor: pointer;
 }
 .kcenter-main .kcode .openBtns div:hover {
-  background-color: var(--color3);
+  background-color: #fff5;
   -webkit-backdrop-filter: blur(1px);
   backdrop-filter: blur(1px);
 }
 .kcenter-main .kcode .codeBoxs {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--sp-8);
+  gap: 8px;
 }
 
 .kcenter-main .kcode .codeBoxs > div {
   position: relative;
-  background-color: var(--color2);
-  border-radius: var(--sp-8);
+  background-color: #f5f5f5;
+  border-radius: 8px;
   outline: none;
   overflow: auto;
 }
 .kcenter-main .kcode .codeBoxs > div::after {
   content: attr(data-lang);
-  padding: var(--padding);
+  padding: 4px 8px;
   position: absolute;
   top: 0;
   right: 0;
-  color: #fff;
+  color: #000;
   font-size: 12px;
   z-index: 1;
 }
@@ -150,7 +150,7 @@
   border: none;
   outline: none;
   background-color: transparent;
-  font-family: mono;
+  font-family: JM;
   font-size: 12px;
 }
 .kcenter-main .kcode .codeBoxs code.wrap {
@@ -175,7 +175,7 @@
   cursor: pointer;
   width: 50px;
   height: 24px;
-  background-color: var(--color2);
+  background-color: #f5f5f5;
   border-radius: 24px;
   position: relative;
   display: block;
@@ -187,7 +187,7 @@
   height: 16px;
   left: 4px;
   bottom: 4px;
-  background-color: var(--color3);
+  background-color: #fff5;
   border-radius: 50%;
   transition: 0.2s;
 }

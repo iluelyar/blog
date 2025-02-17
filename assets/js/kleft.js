@@ -1,56 +1,32 @@
-const searchInput = $(".search-input");
-const resultsList = $(".search-results");
-let kleftdata = [];
-
-// Fetch JSON data
 fetch("/assets/json/kleft.json")
   .then((response) => response.json())
-  .then((data) => (kleftdata = data));
+  .then((data) => {
+    const searchResult = $(".search-result");
+    data.forEach((item) => {
+      const card = $$("div", "card");
 
-function hk(text, keyword) {
-  const k = keyword.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-  const regex = new RegExp(`(${k})`, "gi");
-  return text.replace(regex, '<span class="highlight">$1</span>');
-}
+      const title = $$("div", "title", "", item["title"]);
+      const link = $$("a", "link");
+      link.href = item["link"];
 
-function toggle(show) {
-  resultsList.style.display = show ? "grid" : "none";
-}
-
-function search() {
-  const query = searchInput.value.replace(/\s+/g, " ").trim().toLowerCase();
-  toggle(Boolean(query));
-  resultsList.innerHTML = "";
-
-  if (!query) return;
-
-  const filteredPosts = kleftdata.filter(
-    (post) =>
-      post.title.toLowerCase().includes(query) ||
-      post.content.toLowerCase().includes(query)
-  );
-
-  if (filteredPosts.length === 0) {
-    const listItem = $$("li", "kcard");
-    const message = $$("div", "", "", "没有找到内容!");
-    listItem.append(message);
-    resultsList.append(listItem);
-  } else {
-    filteredPosts.forEach((post) => {
-      const listItem = $$("li", "card");
-      const link = $$("a");
-      const title = $$("div");
-      const content = $$("div", "text");
-
-      link.href = post.link;
-      title.innerHTML = hk(post.title, query);
-      content.innerHTML = hk(post.content, query);
-
-      link.append(title, content);
-      listItem.append(link);
-      resultsList.append(listItem);
+      link.append(title);
+      card.append(link);
+      searchResult.append(card);
     });
-  }
-}
+  });
 
-searchInput.addEventListener("input", search);
+const searchInput = $(".search-input");
+searchInput.addEventListener("input", () => {
+  const keyword = searchInput.value.toLowerCase();
+  document.querySelectorAll(".card").forEach((card) => {
+    const title = card.querySelector(".card-title").innerText.toLowerCase();
+    const subtitle = card
+      .querySelector(".card-subtitle")
+      .innerText.toLowerCase();
+    if (title.includes(keyword) || subtitle.includes(keyword)) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+  });
+});

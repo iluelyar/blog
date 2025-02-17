@@ -3,43 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <meta name="description" content="404 - 在寂世庭的深处迷路了。" />
-    <meta name="keywords" content="html,css,js,svg,404" />
+    <meta name="keywords" content="html,css,js" />
     <meta name="author" content="Kane" />
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="404 - 在寂世庭的深处迷路了" />
-    <meta property="og:description" content="404 - 在寂世庭的深处迷路了" />
-    <meta
-      property="og:image"
-      content="https://elyar.我爱你/assets/img/avatar.jpg"
-    />
-    <meta property="og:url" content="https://elyar.我爱你/404" />
-    <meta property="og:site_name" content="寂世庭" />
-    <!-- Twitter Card Meta Tags -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:title" content="404 - 在寂世庭的深处迷路了" />
-    <meta property="twitter:description" content="404 - 在寂世庭的深处迷路了" />
-    <meta
-      property="twitter:image"
-      content="https://elyar.我爱你/assets/img/avatar.jpg"
-    />
-    <!-- Title -->
+    <!-- title -->
     <title>404 - 在寂世庭的深处迷路了</title>
-    <!-- Favicon -->
-    <link
-      rel="shortcut icon"
-      href="/assets/img/favicon.png"
-      type="image/x-icon"
-    />
-    <!-- CSS -->
+    <!-- css -->
+    <link rel="shortcut icon" href="/assets/img/favicon.png" type="image/png" />
     <link rel="stylesheet" href="/assets/css/index.css" />
     <link rel="stylesheet" href="/assets/css/kleft.css" />
+    <link rel="stylesheet" href="/assets/css/kcenter.css" />
     <link rel="stylesheet" href="/assets/css/kright.css" />
     <style>
       .kcenter {
         width: 100%;
-        height: calc(100vh - var(--sp-16));
+        height: calc(100vh - 16px);
         display: flex;
         overflow: auto;
       }
@@ -52,24 +30,24 @@
         font-weight: bold;
       }
       .kcenter .kcenter-error-text {
-        margin: var(--sp-24) 0;
-        font-size: var(--sp-16);
+        margin: 24px 0;
+        font-size: 16px;
         font-weight: bold;
       }
       .kcenter .kcenter-error-btn {
         width: 140px;
-        height: var(--sp-40);
-        background-color: var(--color2);
-        border-radius: var(--sp-8);
+        height: 40px;
+        background-color: #f5f5f5;
+        border-radius: 8px;
         border: none;
         outline: none;
         text-align: center;
-        color: #fff;
-        line-height: var(--sp-40);
+        color: #000;
+        line-height: 40px;
         transition: all 0.5s ease;
       }
       .kcenter .kcenter-error-btn:hover {
-        background-color: var(--color3);
+        background-color: #fff5;
       }
     </style>
   </head>
@@ -124,7 +102,7 @@
                 autocomplete="off"
               />
             </div>
-            <ul class="search-results"></ul>
+            <ul class="search-result"></ul>
           </div>
         </div>
       </div>
@@ -142,7 +120,7 @@
       </div>
       <div class="kcontrols">
         <div class="kcontrols-left">
-          <img src="/assets/icon/kleftIcon.svg" alt="" />
+          <img src="/assets/svg/right.svg.svg" alt="" />
         </div>
         <div class="kcontrols-right">
           <img src="/assets/icon/krightIcon.svg" alt="" />
