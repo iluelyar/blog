@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="404 - 在寂世庭的深处迷路了。" />
     <meta name="keywords" content="html,css,js" />
-    <meta name="author" content="Kane" />
+    <meta name="author" content="K5938" />
     <!-- title -->
     <title>404 - 在寂世庭的深处迷路了</title>
     <!-- css -->
@@ -37,17 +37,14 @@
       .kcenter .kcenter-error-btn {
         width: 140px;
         height: 40px;
-        background-color: #f5f5f5;
+        background-color: #000000;
         border-radius: 8px;
         border: none;
         outline: none;
-        text-align: center;
-        color: #000;
         line-height: 40px;
-        transition: all 0.5s ease;
-      }
-      .kcenter .kcenter-error-btn:hover {
-        background-color: #fff5;
+        text-align: center;
+        color: #ffffff;
+        cursor: pointer;
       }
     </style>
   </head>
@@ -57,43 +54,45 @@
         <div class="kleft-container">
           <div class="author">
             <div class="author-avatar"></div>
-            <div class="author-name">Kindergarten boss</div>
-            <div class="author-desc">
-              <div class="author-desc-on">要么庸俗，要么孤独</div>
-              <div class="author-desc-off">寂世庭</div>
-            </div>
+            <div class="author-name">K5938</div>
+            <div class="author-desc">要么庸俗，要么孤独</div>
           </div>
           <div class="nav">
-            <a href="/notes/1.html">
+            <a href="/index.html">
               <div class="nav-item">
-                <img src="/assets/icon/noteIcon.svg" alt="" />
+                <img src="/assets/svg/menu.svg" alt="" />
               </div>
             </a>
-            <a href="/works/1.html">
+            <a href="/moments/index.html">
               <div class="nav-item">
-                <img src="/assets/icon/workIcon.svg" alt="" />
+                <img src="/assets/svg/moment.svg" alt="" />
               </div>
             </a>
-            <a href="/logs/1.html">
+            <a href="/notes/index.html">
               <div class="nav-item">
-                <img src="/assets/icon/logIcon.svg" alt="" />
+                <img src="/assets/svg/note.svg" alt="" />
               </div>
             </a>
-            <a href="/charts/1.html">
+            <a href="/visuals/index.html">
               <div class="nav-item">
-                <img src="/assets/icon/chartIcon.svg" alt="" />
+                <img src="/assets/svg/visual.svg" alt="" />
               </div>
             </a>
-            <a href="/tools/1.html">
+            <a href="/devtools/index.html">
               <div class="nav-item">
-                <img src="/assets/icon/toolIcon.svg" alt="" />
+                <img src="/assets/svg/tool.svg" alt="" />
+              </div>
+            </a>
+            <a href="/projects/index.html">
+              <div class="nav-item">
+                <img src="/assets/svg/project.svg" alt="" />
               </div>
             </a>
           </div>
           <div class="search">
             <div class="search-box">
               <div class="search-icon">
-                <img src="/assets/icon/searchIcon.svg" alt="" />
+                <img src="/assets/svg/search.svg" alt="" />
               </div>
               <input
                 class="search-input"
@@ -115,15 +114,9 @@
           <div class="kcenter-error-btn">归寻旧路</div>
         </div>
       </div>
-      <div class="kright">
-        <div class="kright-container"></div>
-      </div>
       <div class="kcontrols">
         <div class="kcontrols-left">
-          <img src="/assets/svg/right.svg.svg" alt="" />
-        </div>
-        <div class="kcontrols-right">
-          <img src="/assets/icon/krightIcon.svg" alt="" />
+          <img src="/assets/svg/slider.svg" alt="" />
         </div>
       </div>
     </div>
@@ -137,7 +130,7 @@
         if (referrer && new URL(referrer).hostname === currentHostname) {
           window.location.href = referrer;
         } else {
-          window.location.href = "/";
+          window.location.href = "/index.html";
         }
       });
     </script>
