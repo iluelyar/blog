@@ -1,4 +1,10 @@
-.kcenter-header {
+.kcenter {
+  display: grid;
+  grid-template-rows: 200px auto 300px 300px 300px 300px;
+  gap: 8px;
+}
+
+.kheader {
   height: 200px;
   padding: 16px;
   background: url(/assets/img/bgimage.jpg) center/cover no-repeat;
@@ -11,11 +17,11 @@
   padding: 16px;
   background: url(/assets/img/bgimage.jpg) center/cover;
   border-radius: 16px;
+  color: #fff;
   display: grid;
   grid-template-columns: 1fr 40px 40px 40px 1fr;
   grid-template-rows: 80px 8px 16px 40px;
   gap: 8px;
-  color: #fff;
 }
 
 .kmusic #audio {
@@ -34,7 +40,6 @@
   overflow: hidden;
   -webkit-box-orient: vertical;
 }
-
 
 .kmusic #progress {
   grid-column: 1/6;
@@ -74,6 +79,75 @@
   margin-left: auto;
 }
 .kmusic img {
-  width: 20px;
+  width: 16px;
   margin: auto;
+}
+
+.kmoment {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 16px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}
+.kmoment .kmoment-item {
+  display: grid;
+  grid-template-columns: 40px 1fr 40px;
+  grid-template-rows: 16px 16px auto;
+  gap: 8px;
+}
+.kmoment .kmoment-avatar {
+  grid-row: 1 / 3;
+  width: 40px;
+  height: 40px;
+}
+.kmoment .kmoment-avatar img {
+  width: 100%;
+  border-radius: 50%;
+}
+.kmoment .kmoment-name {
+  font-size: 1.3em;
+  line-height: 20px;
+  color: hsl(0, 0%, 20%);
+}
+.kmoment .kmoment-time {
+  font-size: 1em;
+  line-height: 16px;
+  color: hsl(0, 0%, 60%);
+}
+.kmoment .kmoment-more {
+  grid-column: 3 / 4;
+  grid-row: 1 / 3;
+  width: 40px;
+  height: 40px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  display: flex;
+}
+.kmoment .kmoment-more img {
+  width: 16px;
+  height: 16px;
+  margin: auto;
+}
+.kmoment .kmoment-content {
+  grid-column: 1 / 4;
+  grid-row: 3 / 4;
+}
+
+.knote {
+  background-color: #fff;
+  border-radius: 16px;
+}
+.kvisual {
+  background-color: #fff;
+  border-radius: 16px;
+}
+.kdevtool {
+  background-color: #fff;
+  border-radius: 16px;
+}
+.kproject {
+  background-color: #fff;
+  border-radius: 16px;
 }
