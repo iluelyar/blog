@@ -55,6 +55,7 @@ a {
   width: 300px;
   height: calc(100vh - 16px);
   padding: 40px 16px;
+  backdrop-filter: blur(5px);
   position: sticky;
   top: 8px;
   border-radius: 16px;
