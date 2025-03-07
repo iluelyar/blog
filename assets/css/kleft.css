@@ -5,8 +5,6 @@
   grid-template-columns: 56px 1fr;
   grid-template-rows: 32px 24px;
   column-gap: 16px;
-  font-family: JM, "宋体";
-  color: #fff;
 }
 .author-avatar {
   width: 56px;
@@ -29,7 +27,7 @@
 .nav-item {
   height: 40px;
   border-radius: 8px;
-  background-color: #fff8;
+  border: 1px solid #fff5;
   display: flex;
 }
 .nav-item img {
@@ -45,7 +43,7 @@
   gap: 8px;
 }
 .search-box {
-  background-color: #fff8;
+  border: 1px solid #fff5;
   border-radius: 8px;
   display: flex;
 }
@@ -59,20 +57,26 @@
   height: 16px;
   margin: auto;
 }
-.search-box input[type="text"] {
+.search-box input {
   width: calc(100% - 48px);
-  background-color: #fff0;
+  background: none;
+  caret-color: white;
+  color: white;
   outline: none;
   border: none;
-  font: 1em JM, "宋体";
 }
+.search-box input::placeholder {
+  font-family: JM, "宋体";
+  color: white;
+}
+
 .search-result {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 .search-result .card {
-  background-color: #fff8;
+  border: 1px solid #fff5;
   border-radius: 8px;
 }
 .search-result .title {
@@ -80,5 +84,4 @@
   padding: 0 16px;
   line-height: 42px;
   font-size: 0.9em;
-  color: #333;
 }
