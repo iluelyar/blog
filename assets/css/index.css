@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: JM;
+  src: url("/assets/ttf/JetBrainsMono-Regular.ttf");
+}
+
+body {
+  min-width: 320px;
+  background: url(/assets/jpg/bg.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  scroll-behavior: smooth;
+  user-select: none;
+  font-size: 14px;
+  font-family: JM, "宋体";
+  color: white;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+input {
+  background: none;
+  outline: none;
+  border: none;
+  color: white;
+  caret-color: white;
+  font-family: JM, "宋体";
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.blog {
+  width: 100%;
+  max-width: 1320px;
+  padding: 8px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 300px 1fr 300px;
+  gap: 16px;
+}
+
+.left,
+.right {
+  width: 300px;
+  height: calc(100vh - 16px);
+  padding: 40px 16px;
+  backdrop-filter: blur(8px);
+  position: sticky;
+  top: 8px;
+  border-radius: 16px;
+  transition: all 0.5s ease;
+  z-index: 999;
+}
+
+@media  (max-width: 640px) {
+  .blog {
+    grid-template-columns: 1fr;
+  }
+  .left {
+    position: fixed;
+    top: 8px;
+    left: -300px;
+  }
+  .right {
+    position: fixed;
+    top: 8px;
+    right: -300px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1080px) {
+  .blog {
+    grid-template-columns: 300px 1fr;
+  }
+  .right {
+    position: fixed;
+    top: 8px;
+    right: -300px;
+  }
+  .controls .controls-left {
+    display: none;
+  }
+}
+
+@media (min-width: 1081px) {
+  .controls {
+    display: none;
+  }
+}
+
+.controls {
+  width: 40px;
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  border: 1px solid #fff5;
+  backdrop-filter: blur(8px);
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: 999;
+}
+.controls-left,
+.controls-right {
+  width: 40px;
+  height: 40px;
+  display: flex;
+}
+.controls-left img,
+.controls-right img {
+  width: 24px;
+  height: 24px;
+  margin: auto;
+}
