@@ -1,7 +1,7 @@
 const resultdata = [
   {
     "title": "HTML + CSS 实现文件夹图片卡片效果",
-    "link": "/i/1.html"
+    "link": "/1.html"
   }
 ];
 
