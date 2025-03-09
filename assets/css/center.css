@@ -1,6 +1,6 @@
 .center {
   display: grid;
-  grid-template-rows: 200px 300px 300px 300px 300px;
+  grid-template-rows: 200px auto 300px 300px 300px;
   gap: 8px;
 }
 
