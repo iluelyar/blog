@@ -15,6 +15,15 @@
     <link rel="stylesheet" href="/assets/css/left.css" />
     <link rel="stylesheet" href="/assets/css/center.css" />
     <link rel="stylesheet" href="/assets/css/right.css" />
+    <style>
+      .center {
+        display: block;
+      }
+      .moment {
+        display: flex;
+        gap: 8px;
+      }
+    </style>
   </head>
   <body>
     <div class="blog">
@@ -71,7 +80,9 @@
           <ul class="search-result"></ul>
         </div>
       </div>
-      <div class="center"></div>
+      <div class="center">
+        <div class="moment"></div>
+      </div>
       <div class="right"></div>
       <div class="controls">
         <div class="controls-left">
@@ -84,5 +95,6 @@
     </div>
     <script src="/assets/js/index.js"></script>
     <script src="/assets/js/left.js"></script>
+    <script src="/assets/js/moment.js"></script>
   </body>
 </html>

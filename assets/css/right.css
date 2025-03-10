@@ -1,5 +1,6 @@
 .moment {
-  display: grid;
+  display: flex;
+  flex-direction: column-reverse;
   gap: 8px;
 }
 .moment .moment-item {
@@ -45,4 +46,31 @@
 .moment .moment-content {
   grid-column: 1 / 4;
   grid-row: 3 / 4;
+  display: grid;
+  gap: 8px;
+}
+.moment .moment-content .moment-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+.moment .moment-content .moment-grid .moment-img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.moment .moment-content .moment-grid .moment-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.moment .moment-content video {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+.moment .moment-content audio {
+  width: 100%;
+  border-radius: 8px;
 }
