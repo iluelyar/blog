@@ -17,7 +17,6 @@
 .author-name {
   font-size: 2em;
 }
-
 .nav {
   width: 100%;
   margin: 24px 0 0 0;
@@ -30,13 +29,13 @@
   border-radius: 8px;
   border: 1px solid #fff5;
   display: flex;
+  cursor: pointer;
 }
 .nav-item img {
   width: 20px;
   height: 20px;
   margin: auto;
 }
-
 .search {
   margin: 8px 0;
   display: flex;
@@ -60,6 +59,12 @@
 }
 .search-box input {
   width: calc(100% - 48px);
+  background: none;
+  outline: none;
+  border: none;
+  color: white;
+  caret-color: white;
+  font-family: JM, "宋体";
 }
 .search-box input::placeholder {
   font-family: JM, "宋体";

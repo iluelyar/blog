@@ -24,7 +24,3 @@ $(".controls-right").addEventListener("click", () => {
     $(".right").style.right = "-300px";
   }
 });
-
-$(".author-avatar").addEventListener("click", () => {
-  window.location.href = "/index.html";
-});

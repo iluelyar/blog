@@ -12,65 +12,13 @@
     <title>寂世庭</title>
     <!-- css -->
     <link rel="stylesheet" href="/assets/css/index.css" />
-    <link rel="stylesheet" href="/assets/css/left.css" />
+
     <link rel="stylesheet" href="/assets/css/center.css" />
     <link rel="stylesheet" href="/assets/css/right.css" />
   </head>
   <body>
     <div class="blog">
-      <div class="left">
-        <div class="author">
-          <div class="author-avatar"></div>
-          <div class="author-name">K5938</div>
-          <div class="author-desc">要么庸俗，要么孤独</div>
-        </div>
-        <div class="nav">
-          <a href="/index.html">
-            <div class="nav-item">
-              <img src="/assets/svg/menu.svg" alt="" />
-            </div>
-          </a>
-          <a href="/moments.html">
-            <div class="nav-item">
-              <img src="/assets/svg/moment.svg" alt="" />
-            </div>
-          </a>
-          <a href="/notes.html">
-            <div class="nav-item">
-              <img src="/assets/svg/note.svg" alt="" />
-            </div>
-          </a>
-          <a href="/visuals.html">
-            <div class="nav-item">
-              <img src="/assets/svg/visual.svg" alt="" />
-            </div>
-          </a>
-          <a href="/devtools.html">
-            <div class="nav-item">
-              <img src="/assets/svg/tool.svg" alt="" />
-            </div>
-          </a>
-          <a href="/projects.html">
-            <div class="nav-item">
-              <img src="/assets/svg/project.svg" alt="" />
-            </div>
-          </a>
-        </div>
-        <div class="search">
-          <div class="search-box">
-            <div class="search-icon">
-              <img src="/assets/svg/search.svg" alt="" />
-            </div>
-            <input
-              class="search-input"
-              type="text"
-              placeholder="搜索"
-              autocomplete="off"
-            />
-          </div>
-          <ul class="search-result"></ul>
-        </div>
-      </div>
+      <k-slide author-name="K5938" author-desc="要么庸俗，要么孤独"></k-slide>
       <div class="center">
 
       </div>
@@ -87,6 +35,6 @@
       </div>
     </div>
     <script src="/assets/js/index.js"></script>
-    <script src="/assets/js/left.js"></script>
+    <script src="./component/KSlide.js"></script>
   </body>
 </html>
