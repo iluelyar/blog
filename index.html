@@ -17,7 +17,7 @@
   </head>
   <body>
     <div class="blog">
-      <k-slide author-name="K5938" author-desc="要么庸俗，要么孤独"></k-slide>
+      <k-slide data-slide="1"></k-slide>
       <div class="center">
         <div class="music">
           <audio id="audio"></audio>
@@ -48,20 +48,13 @@
         <div class="devtool">空</div>
         <div class="project">空</div>
       </div>
-      <div class="right">
-        <div class="moment"></div>
-      </div>
-      <div class="controls">
-        <div class="controls-left">
-          <img src="/assets/svg/slider.svg" alt="" />
-        </div>
-        <div class="controls-right">
-          <img src="/assets/svg/bar.svg" alt="" />
-        </div>
-      </div>
+      <k-card-panel></k-card-panel>
+      <k-blog-contr data-slide="1"></k-blog-contr>
     </div>
     <script src="/assets/js/index.js"></script>
     <script src="./component/KSlide.js"></script>
+    <script src="./component/KCardPanel.js"></script>
+    <script src="./component/KBlogContr.js"></script>
     <script src="/assets/js/music.js"></script>
     <script src="/assets/js/moment.js"></script>
   </body>
