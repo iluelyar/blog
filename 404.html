@@ -66,16 +66,24 @@
       kui.kcontr();
     </script>
     <script>
-      $(".error-btn").addEventListener("click", function () {
-        console.log("123");
-        var referrer = document.referrer;
-        var currentHostname = window.location.hostname;
+      document.addEventListener("DOMContentLoaded", function () {
+        const btn = document.querySelector(".error-btn");
+        if (btn) {
+          btn.addEventListener("click", function () {
+            console.log("按钮点击了！");
+            var referrer = document.referrer;
+            var currentHostname = window.location.hostname;
 
-        if (referrer && new URL(referrer).hostname === currentHostname) {
-          window.location.href = referrer;
+            if (referrer && new URL(referrer).hostname === currentHostname) {
+              window.location.href = referrer;
+            } else {
+              window.location.href = "/index.html";
+            }
+          });
         } else {
-          window.location.href = "/index.html";
+          console.log("没有找到按钮！");
         }
+        console.log("当前跳转 URL: ", referrer ? referrer : "/index.html");
       });
     </script>
   </body>
