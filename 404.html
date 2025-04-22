@@ -66,22 +66,17 @@
       kui.kcontr();
     </script>
     <script>
-const errorBtn = $(".error-btn")[0];
-if (errorBtn) {
-  errorBtn.addEventListener("click", function () {
-    var referrer = document.referrer;
-    var currentHostname = window.location.hostname;
+      $(".error-btn").addEventListener("click", function () {
+        console.log("123");
+        var referrer = document.referrer;
+        var currentHostname = window.location.hostname;
 
-    if (referrer && new URL(referrer).hostname === currentHostname) {
-      window.location.href = referrer;
-    } else {
-      window.location.href = "/index.html";
-    }
-  });
-} else {
-  console.log("按钮没有找到！");
-}
-
+        if (referrer && new URL(referrer).hostname === currentHostname) {
+          window.location.href = referrer;
+        } else {
+          window.location.href = "/index.html";
+        }
+      });
     </script>
   </body>
 </html>
