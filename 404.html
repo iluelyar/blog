@@ -6,35 +6,30 @@
     <meta name="description" content="404 - 在寂世庭的深处迷路了。" />
     <meta name="keywords" content="html,css,js" />
     <meta name="author" content="K5938" />
-    <!-- title -->
     <title>404 - 在寂世庭的深处迷路了</title>
-    <!-- css -->
     <link rel="shortcut icon" href="/assets/png/favicon.png" type="image/png" />
     <link rel="stylesheet" href="/assets/css/index.css" />
-    <link rel="stylesheet" href="/assets/css/left.css" />
-    <link rel="stylesheet" href="/assets/css/center.css" />
-    <link rel="stylesheet" href="/assets/css/right.css" />
+    <script src="/assets/js/index.js"></script>
     <style>
-      .center {
+      kmain {
         width: 100%;
         height: calc(100vh - 16px);
         display: flex;
-        overflow: auto;
       }
-      .center .center-error {
+      kmain .error {
         width: 340px;
         margin: auto;
       }
-      .center .center-error-404 {
+      kmain .error-404 {
         font-size: 2em;
         font-weight: bold;
       }
-      .center .center-error-text {
+      kmain .error-text {
         margin: 24px 0;
         font-size: 16px;
         font-weight: bold;
       }
-      .center .center-error-btn {
+      kmain .error-btn {
         width: 140px;
         height: 40px;
         background-color: #fff5;
@@ -43,37 +38,35 @@
         outline: none;
         line-height: 40px;
         text-align: center;
-        color: whitefff;
+        color: white;
         cursor: pointer;
       }
     </style>
   </head>
   <body>
-    <div class="blog">
-      <k-slide></k-slide>
-      <div class="center">
-        <div class="center-error">
-          <div class="center-error-404">404 - 在寂世庭的深处迷路了</div>
-          <div class="center-error-text">
+    <div class="kblog">
+      <kslide></kslide>
+      <kmain>
+        <div class="error">
+          <div class="error-404">404 - 在寂世庭的深处迷路了</div>
+          <div class="error-text">
             于此寂世庭，幽静深远，时有未可及之地。汝误入一隅，寻不得其踪，或此地已化虚无，杳然难觅。
           </div>
-          <div class="center-error-btn">归寻旧路</div>
+          <div class="error-btn">归寻旧路</div>
         </div>
-      </div>
-      <k-card-panel></k-card-panel>
-      <div class="controls">
-        <div class="controls-left">
-          <img src="/assets/svg/slider.svg" alt="" />
-        </div>
-        <div class="controls-right">
-          <img src="/assets/svg/bar.svg" alt="" />
-        </div>
-      </div>
+      </kmain>
+      <kpanel></kpanel>
+      <kcontr></kcontr>
     </div>
-    <script src="/assets/js/index.js"></script>
-    <script src="./component/KSlide.js"></script>
+    <script type="module">
+      import { kui } from "/kui/kui.js";
+      kui.kslide();
+      kui.kmain();
+      kui.kpanel();
+      kui.kcontr();
+    </script>
     <script>
-      $(".center-error-btn").addEventListener("click", function () {
+      $(".error-btn").addEventListener("click", function () {
         var referrer = document.referrer;
         var currentHostname = window.location.hostname;
 

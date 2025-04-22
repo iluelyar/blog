@@ -6,56 +6,24 @@
     <meta name="description" content="寂世庭" />
     <meta name="keywords" content="html,css,js" />
     <meta name="author" content="K5938" />
-    <!-- favicon -->
-    <link rel="shortcut icon" href="/assets/png/favicon.png" type="image/png" />
-    <!-- title -->
     <title>寂世庭</title>
-    <!-- css -->
+    <link rel="shortcut icon" href="/assets/png/favicon.png" type="image/png" />
     <link rel="stylesheet" href="/assets/css/index.css" />
-    <link rel="stylesheet" href="/assets/css/center.css" />
-    <link rel="stylesheet" href="/assets/css/right.css" />
+    <script src="/assets/js/index.js"></script>
   </head>
   <body>
-    <div class="blog">
-      <k-slide data-slide="1"></k-slide>
-      <div class="center">
-        <div class="music">
-          <audio id="audio"></audio>
-          <div id="title"></div>
-          <div id="progress">
-            <div id="progressbar"></div>
-          </div>
-          <div id="ctime">00:00</div>
-          <div id="ttime">00:00</div>
-          <div id="loop">
-            <img src="/assets/svg/listloop.svg" alt="" />
-          </div>
-          <div id="prev">
-            <img src="/assets/svg/prev.svg" alt="" />
-          </div>
-          <div id="toggle">
-            <img src="/assets/svg/pause.svg" alt="" />
-          </div>
-          <div id="next">
-            <img src="/assets/svg/next.svg" alt="" />
-          </div>
-          <div id="list">
-            <img src="/assets/svg/bar.svg" alt="" />
-          </div>
-        </div>
-        <div class="note">空</div>
-        <div class="visual">空</div>
-        <div class="devtool">空</div>
-        <div class="project">空</div>
-      </div>
-      <k-card-panel></k-card-panel>
-      <k-blog-contr data-slide="1"></k-blog-contr>
+    <div class="kblog">
+      <kslide></kslide>
+      <kmain></kmain>
+      <kpanel></kpanel>
+      <kcontr></kcontr>
     </div>
-    <script src="/assets/js/index.js"></script>
-    <script src="./component/KSlide.js"></script>
-    <script src="./component/KCardPanel.js"></script>
-    <script src="./component/KBlogContr.js"></script>
-    <script src="/assets/js/music.js"></script>
-    <script src="/assets/js/moment.js"></script>
+    <script type="module">
+      import { kui } from "/kui/kui.js";
+      kui.kslide();
+      kui.kmain();
+      kui.kpanel();
+      kui.kcontr();
+    </script>
   </body>
 </html>

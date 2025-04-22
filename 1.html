@@ -1,22 +1,21 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="寂世庭" />
     <meta name="keywords" content="html,css,js" />
     <meta name="author" content="K5938" />
-    <!-- favicon -->
-    <link rel="shortcut icon" href="/assets/png/favicon.png" type="image/png" />
-    <!-- title -->
     <title>寂世庭</title>
-    <!-- css -->
+    <link rel="shortcut icon" href="/assets/png/favicon.png" type="image/png" />
     <link rel="stylesheet" href="/assets/css/index.css" />
-    <link rel="stylesheet" href="/assets/css/center.css" />
-    <link rel="stylesheet" href="/assets/css/right.css" />
+    <script src="/assets/js/index.js"></script>
     <style>
       .preview {
-        height: 400px;
+        padding: 40px;
+        border: 1px solid #fff5;
+        backdrop-filter: blur(8px);
+        border-radius: 16px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -111,12 +110,12 @@
     </style>
   </head>
   <body>
-    <div class="blog">
-      <k-slide></k-slide>
-      <div class="center">
-        <div class="preview" style="border: 1px solid;">
+    <div class="kblog">
+      <kslide></kslide>
+      <kmain>
+        <div class="preview">
           <div class="card_0001">
-            <img class="back" src="/visuals/320_260.svg" />
+            <img class="back" src="./v/320_260.svg" />
             <img class="inner inner_1" src="https://picsum.photos/200/200?1" />
             <img class="inner inner_2" src="https://picsum.photos/200/200?2" />
             <img class="inner inner_3" src="https://picsum.photos/200/200?3" />
@@ -130,18 +129,16 @@
             </div>
           </div>
         </div>
-      </div>
-      <k-card-panel></k-card-panel>
-      <div class="controls">
-        <div class="controls-left">
-          <img src="/assets/svg/slider.svg" alt="" />
-        </div>
-        <div class="controls-right">
-          <img src="/assets/svg/bar.svg" alt="" />
-        </div>
-      </div>
+      </kmain>
+      <kpanel></kpanel>
+      <kcontr></kcontr>
     </div>
-    <script src="/assets/js/index.js"></script>
-    <script src="./component/KSlide.js"></script>
+    <script type="module">
+      import { kui } from "/kui/kui.js";
+      kui.kslide();
+      kui.kmain();
+      kui.kpanel();
+      kui.kcontr();
+    </script>
   </body>
 </html>
