@@ -11,25 +11,25 @@
     <link rel="stylesheet" href="/assets/css/index.css" />
     <script src="/assets/js/index.js"></script>
     <style>
-      kmain {
+      .error {
         width: 100%;
         height: calc(100vh - 16px);
         display: flex;
       }
-      kmain .error {
+      .error .inner {
         width: 340px;
         margin: auto;
       }
-      kmain .error-404 {
+      .error .inner .error-404 {
         font-size: 2em;
         font-weight: bold;
       }
-      kmain .error-text {
+      .error .inner .error-text {
         margin: 24px 0;
         font-size: 16px;
         font-weight: bold;
       }
-      kmain .error-btn {
+      .error .inner .error-btn {
         width: 140px;
         height: 40px;
         background-color: #fff5;
@@ -46,22 +46,21 @@
   <body>
     <div class="kblog">
       <kslide></kslide>
-      <kmain>
-        <div class="error">
+      <div class="error">
+        <div class="inner">
           <div class="error-404">404 - 在寂世庭的深处迷路了</div>
           <div class="error-text">
             于此寂世庭，幽静深远，时有未可及之地。汝误入一隅，寻不得其踪，或此地已化虚无，杳然难觅。
           </div>
           <div class="error-btn">归寻旧路</div>
         </div>
-      </kmain>
+      </div>
       <kpanel></kpanel>
       <kcontr></kcontr>
     </div>
     <script type="module">
       import { kui } from "/kui/kui.js";
       kui.kslide();
-      kui.kmain();
       kui.kpanel();
       kui.kcontr();
     </script>
