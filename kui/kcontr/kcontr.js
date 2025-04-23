@@ -7,11 +7,11 @@ export async function kcontr(el) {
     fetch("/kui/kcontr/kcontr.css").then((res) => res.text()),
   ]);
 
-  document.head.append($$("style", "", "", cssText));
+  document.head.append($$("style", { text: cssText }));
   el.innerHTML = htmlText;
 
-  const slideBtn = $(".slide-btn", el); 
-  const panelBtn = $(".panel-btn", el); 
+  const slideBtn = $(".slide-btn", el);
+  const panelBtn = $(".panel-btn", el);
   const kslide = $("kslide");
   const kpanel = $("kpanel");
 
