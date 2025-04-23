@@ -18,14 +18,13 @@ export async function kslide(el) {
     result.innerHTML = "";
     (list.length ? list : [{ title: "未找到相关结果", link: "" }]).forEach(
       (d) => {
-        const item = $$("div", { className: "result-item" });
         const link = $a(d.link, {
-          text: d.title,
           className: "result-title",
           target: "_self",
         });
-        item.append(link);
-        result.append(item);
+        const item = $$("div", { className: "result-item", text: d.title });
+        link.append(item);
+        result.append(link);
       }
     );
   };

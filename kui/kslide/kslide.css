@@ -85,17 +85,15 @@ kslide .search .search-result {
   gap: 8px;
 }
 kslide .search .result-item {
+  height: 40px;
+  padding: 0 16px;
   border: 1px solid #fff5;
   border-radius: 8px;
+  line-height: 40px;
+  font-size: 0.9em;
   transition: background 0.2s ease;
   cursor: pointer;
 }
 kslide .search .result-item:hover {
   background: rgba(255, 255, 255, 0.1);
-}
-kslide .search .result-title {
-  height: 40px;
-  padding: 0 16px;
-  line-height: 42px;
-  font-size: 0.9em;
 }
