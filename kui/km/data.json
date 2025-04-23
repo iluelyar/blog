@@ -1,0 +1,76 @@
+[
+    {
+        "avatar": "/src/png/avatar.png",
+        "name": "K5938",
+        "moreLink": "/m.html",
+        "time": "25/02/24 一 雨",
+        "content": {
+            "text": [
+                "第一行",
+                "新的一行",
+                "新的一行",
+                "新的一行"
+            ]
+        }
+    },
+    {
+        "avatar": "/src/png/avatar.png",
+        "name": "K5938",
+        "moreLink": "/m.html",
+        "time": "25/02/24 一 雨",
+        "content": {
+            "text": [
+                "第一行",
+                "新的一行",
+                "新的一行"
+            ],
+            "images": [
+                "/src/png/avatar.png",
+                "/src/jpg/bg.jpg",
+                "/src/jpg/bg.jpg",
+                "/src/png/avatar.png",
+                "/src/jpg/bg.jpg",
+                "/src/png/avatar.png",
+                "/src/jpg/bg.jpg"
+            ]
+        }
+    },
+    {
+        "avatar": "/src/png/avatar.png",
+        "name": "K5938",
+        "moreLink": "/m.html",
+        "time": "25/02/25 二 雨",
+        "content": {
+            "text": [
+                "第一行",
+                "新的一行"
+            ],
+            "video": "/m/video/1.mp4"
+        }
+    },
+    {
+        "avatar": "/src/png/avatar.png",
+        "name": "K5938",
+        "moreLink": "/m.html",
+        "time": "25/02/25 二 雨",
+        "content": {
+            "text": [
+                "第一行"
+            ],
+            "audio": "/m/music/1.ogg"
+        }
+    },
+    {
+        "avatar": "/src/png/avatar.png",
+        "name": "K5938",
+        "moreLink": "/m.html",
+        "time": "25/02/26 三 晴",
+        "content": {
+            "text": [
+                "第一行",
+                "新的一行"
+            ],
+            "link": "https://www.example.com"
+        }
+    }
+]

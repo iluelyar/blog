@@ -7,9 +7,9 @@
     <meta name="keywords" content="html,css,js" />
     <meta name="author" content="K5938" />
     <title>404 - 在寂世庭的深处迷路了</title>
-    <link rel="shortcut icon" href="/assets/png/favicon.png" type="image/png" />
-    <link rel="stylesheet" href="/assets/css/index.css" />
-    <script src="/assets/js/index.js"></script>
+    <link rel="shortcut icon" href="/src/png/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/kui/kui.css" />
+    <script src="/kui/dom.js"></script>
     <style>
       .error {
         width: 100%;
@@ -59,15 +59,10 @@
       <kcontr></kcontr>
     </div>
     <script type="module">
-      import { kui } from "/kui/kui.js";
-      kui.kslide();
-      kui.kpanel();
-      kui.kcontr();
-    </script>
-    <script>
-      const btn = document.querySelector(".error-btn");
-      btn.addEventListener("click", function () {
-        window.location.href = "/index.html";
+      import { setup } from "/kui/kui.js";
+
+      window.addEventListener("DOMContentLoaded", async () => {
+        await setup();
       });
     </script>
   </body>
