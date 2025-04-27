@@ -1,22 +1,6 @@
 [
   {
-    "title": "HTML + CSS 实现文件夹图片卡片效果",
+    "title": "[卡片]相册文件夹",
     "link": "/1.html"
-  },
-  {
-    "title": "JavaScript 实现待办事项排序功能",
-    "link": "/todo-sort.html"
-  },
-  {
-    "title": "大学生时间管理技巧",
-    "link": "/study-tips.html"
-  },
-  {
-    "title": "KChart 图表库初探",
-    "link": "/kchart-intro.html"
-  },
-  {
-    "title": "如何使用 D3.js 绘制饼图",
-    "link": "/d3-pie.html"
   }
 ]
