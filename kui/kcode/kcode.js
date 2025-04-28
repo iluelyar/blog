@@ -2,43 +2,70 @@ export async function kcode(el) {
   if (el.dataset.inited) return;
   el.dataset.inited = "true";
 
-  const [kcodeHtmlText, kcodeCssText] = await Promise.all([
-    fetch("/kui/kcode/kcode.html").then((res) => res.text()),
-    fetch("/kui/kcode/kcode.css").then((res) => res.text()),
-  ]);
-
-  document.head.append($$("style", { text: kcodeCssText }));
-  el.innerHTML = kcodeHtmlText;
-
   const htmlPath = el.dataset.html;
   const cssPath = el.dataset.css;
 
-  const [preHtmlText, preCssText] = await Promise.all([
-    htmlPath ? fetch(htmlPath).then((res) => res.text()) : Promise.resolve(""),
-    cssPath ? fetch(cssPath).then((res) => res.text()) : Promise.resolve(""),
-  ]);
+  const data = {
+    htmlFilePath: htmlPath,
+    cssFilePath: cssPath,
+    htmlFileName: htmlPath.split("/").pop(),
+    cssFileName: cssPath.split("/").pop(),
+    outHtml: await fetch("/kui/kcode/kcode.html").then((res) => res.text()),
+    outCss: await fetch("/kui/kcode/kcode.css").then((res) => res.text()),
+    innerHtml: await fetch(htmlPath).then((res) => res.text()),
+    innerCss: await fetch(cssPath).then((res) => res.text()),
+  };
 
-  const htmlBox = $(".html-box", el);
-  const cssBox = $(".css-box", el);
-  const copyHtmlBtn = $(".copy-html", el);
-  const copyCssBtn = $(".copy-css", el);
+  document.head.append($$("style", { text: data.outCss }));
 
-  if (htmlBox) htmlBox.textContent = preHtmlText.trim();
-  if (cssBox) cssBox.textContent = preCssText.trim();
+  el.innerHTML = data.outHtml;
 
-  if (copyHtmlBtn) {
-    copyHtmlBtn.addEventListener("click", async () => {
-      await navigator.clipboard.writeText(preHtmlText.trim());
-      copyHtmlBtn.textContent = "已复制";
-      setTimeout(() => (copyHtmlBtn.textContent = "复制"), 1500);
+  renderHtmlBlock(el, data);
+  renderCssBlock(el, data);
+}
+
+function renderHtmlBlock(el, data) {
+  const htmlBox = $(".kcode-html", el);
+  const codeBox = $(".kcode-body", htmlBox);
+  const title = $(".kcode-title", htmlBox);
+  const copyBtn = $(".kcode-copy", htmlBox);
+  const wrapBtn = $(".kcode-wrap", htmlBox);
+
+  title.textContent = data.htmlFileName;
+  codeBox.textContent = data.innerHtml.trim();
+
+  copyBtn.onclick = () => {
+    navigator.clipboard.writeText(data.innerHtml.trim()).then(() => {
+      alert("HTML 代码已复制！");
     });
-  }
+  };
 
-  if (copyCssBtn) {
-    copyCssBtn.addEventListener("click", async () => {
-      await navigator.clipboard.writeText(preCssText.trim());
-      copyCssBtn.textContent = "已复制";
-      setTimeout(() => (copyCssBtn.textContent = "复制"), 1500);
+  let wrapped = true;
+  wrapBtn.onclick = () => {
+    wrapped = !wrapped;
+    codeBox.style.whiteSpace = wrapped ? "pre-wrap" : "pre";
+  };
+}
+
+function renderCssBlock(el, data) {
+  const cssBox = $(".kcode-css", el);
+  const codeBox = $(".kcode-body", cssBox);
+  const title = $(".kcode-title", cssBox);
+  const copyBtn = $(".kcode-copy", cssBox);
+  const wrapBtn = $(".kcode-wrap", cssBox);
+
+  title.textContent = data.cssFileName;
+  codeBox.textContent = data.innerCss.trim();
+
+  copyBtn.onclick = () => {
+    navigator.clipboard.writeText(data.innerCss.trim()).then(() => {
+      alert("CSS 代码已复制！");
     });
-  }
+  };
+
+  let wrapped = true;
+  wrapBtn.onclick = () => {
+    wrapped = !wrapped;
+    codeBox.style.whiteSpace = wrapped ? "pre-wrap" : "pre";
+  };
 }

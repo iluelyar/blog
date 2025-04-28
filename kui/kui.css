@@ -84,7 +84,7 @@ kpanel.open {
   right: 8px;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 720px) {
   .kblog {
     grid-template-columns: 1fr;
     gap: 0;
@@ -103,7 +103,7 @@ kpanel.open {
   }
 }
 
-@media (min-width: 641px) and (max-width: 1080px) {
+@media (min-width: 721px) and (max-width: 1080px) {
   .kblog {
     grid-template-columns: 300px 1fr;
   }
