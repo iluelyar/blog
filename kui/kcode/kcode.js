@@ -1,0 +1,71 @@
+export async function kcode(el) {
+  if (el.dataset.inited) return;
+  el.dataset.inited = "true";
+
+  const htmlPath = el.dataset.html;
+  const cssPath = el.dataset.css;
+
+  const data = {
+    htmlFilePath: htmlPath,
+    cssFilePath: cssPath,
+    htmlFileName: htmlPath.split("/").pop(),
+    cssFileName: cssPath.split("/").pop(),
+    outHtml: await fetch("/kui/kcode/kcode.html").then((res) => res.text()),
+    outCss: await fetch("/kui/kcode/kcode.css").then((res) => res.text()),
+    innerHtml: await fetch(htmlPath).then((res) => res.text()),
+    innerCss: await fetch(cssPath).then((res) => res.text()),
+  };
+
+  document.head.append($$("style", { text: data.outCss }));
+
+  el.innerHTML = data.outHtml;
+
+  renderHtmlBlock(el, data);
+  renderCssBlock(el, data);
+}
+
+function renderHtmlBlock(el, data) {
+  const htmlBox = $(".kcode-html", el);
+  const codeBox = $(".kcode-body", htmlBox);
+  const title = $(".kcode-title", htmlBox);
+  const copyBtn = $(".kcode-copy", htmlBox);
+  const wrapBtn = $(".kcode-wrap", htmlBox);
+
+  title.textContent = data.htmlFileName;
+  codeBox.textContent = data.innerHtml.trim();
+
+  copyBtn.onclick = () => {
+    navigator.clipboard.writeText(data.innerHtml.trim()).then(() => {
+      alert("HTML 代码已复制！");
+    });
+  };
+
+  let wrapped = true;
+  wrapBtn.onclick = () => {
+    wrapped = !wrapped;
+    codeBox.style.whiteSpace = wrapped ? "pre-wrap" : "pre";
+  };
+}
+
+function renderCssBlock(el, data) {
+  const cssBox = $(".kcode-css", el);
+  const codeBox = $(".kcode-body", cssBox);
+  const title = $(".kcode-title", cssBox);
+  const copyBtn = $(".kcode-copy", cssBox);
+  const wrapBtn = $(".kcode-wrap", cssBox);
+
+  title.textContent = data.cssFileName;
+  codeBox.textContent = data.innerCss.trim();
+
+  copyBtn.onclick = () => {
+    navigator.clipboard.writeText(data.innerCss.trim()).then(() => {
+      alert("CSS 代码已复制！");
+    });
+  };
+
+  let wrapped = true;
+  wrapBtn.onclick = () => {
+    wrapped = !wrapped;
+    codeBox.style.whiteSpace = wrapped ? "pre-wrap" : "pre";
+  };
+}
