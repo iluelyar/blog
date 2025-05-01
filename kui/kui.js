@@ -2,20 +2,22 @@ import { kslide } from "./kslide/kslide.js";
 import { kmain } from "./kmain/kmain.js";
 import { kpanel } from "./kpanel/kpanel.js";
 import { kcontr } from "./kcontr/kcontr.js";
-import { km } from "./km/km.js";
+import { kmoment } from "./kmoment/kmoment.js";
 import { kview } from "./kview/kview.js";
 import { kcode } from "./kcode/kcode.js";
-import { card_album } from "./card/card_album.js";
+import { card_album } from "./kcard/card_album.js";
+import { music_player } from "./ktool/music_player.js";
 
 const kui = {
   kslide,
   kmain,
   kpanel,
   kcontr,
-  km,
+  kmoment,
   kview,
   kcode,
   card_album,
+  music_player,
 };
 
 const initializedElements = new WeakMap();

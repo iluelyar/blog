@@ -66,5 +66,7 @@ kcode .kcode-body {
   word-break: break-word;
   font-family: inherit;
   font-size: inherit;
-  overflow: auto;
+}
+kcode .kcode-js{
+  display: none;
 }
