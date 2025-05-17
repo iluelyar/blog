@@ -1,13 +1,13 @@
-.card_album {
+card_album {
   width: 320px;
   height: 260px;
   position: relative;
 }
 
-.card_album .back {
+card_album .back {
   width: 320px;
 }
-.card_album .inner {
+card_album .inner {
   width: 180px;
   border-radius: 16px;
   border: 8px solid white;
@@ -16,25 +16,25 @@
   position: absolute;
   transition: all 0.5s;
 }
-.card_album .inner_1 {
+card_album .inner_1 {
   transform-origin: 100% 100%;
   height: 236px;
   bottom: 24px;
   right: 24px;
 }
-.card_album .inner_2 {
+card_album .inner_2 {
   transform-origin: 0% 100%;
   height: 196px;
   bottom: 24px;
   left: 24px;
 }
-.card_album .inner_3 {
+card_album .inner_3 {
   transform-origin: 100% 100%;
   height: 164px;
   bottom: 24px;
   left: 62px;
 }
-.card_album .front {
+card_album .front {
   width: 320px;
   height: 160px;
   border-radius: 16px;
@@ -46,7 +46,7 @@
   transition: all 0.5s;
   z-index: 1;
 }
-.card_album .front .text {
+card_album .front .text {
   margin: 24px;
   height: 40px;
   text-shadow: 0 4px 4px #0005;
@@ -56,7 +56,7 @@
   font-weight: bold;
   color: white;
 }
-.card_album .front .boxs {
+card_album .front .boxs {
   width: 87px;
   height: 24px;
   display: flex;
@@ -65,22 +65,22 @@
   bottom: 24px;
   right: 24px;
 }
-.card_album .front .boxs .box {
+card_album .front .boxs .box {
   width: 24px;
   height: 24px;
   border-radius: 50%;
   background-color: #777;
 }
 
-.card_album:hover .inner_1 {
+card_album:hover .inner_1 {
   transform: rotateZ(8deg) translateY(-8px);
 }
-.card_album:hover .inner_2 {
+card_album:hover .inner_2 {
   transform: rotateZ(-8deg) translateY(-8px);
 }
-.card_album:hover .inner_3 {
+card_album:hover .inner_3 {
   transform: rotateZ(4deg) translateY(-4px);
 }
-.card_album:hover :nth-child(5) {
+card_album:hover :nth-child(5) {
   height: 130px;
 }

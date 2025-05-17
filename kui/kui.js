@@ -1,12 +1,13 @@
-import { kslide } from "./kslide/kslide.js";
-import { kmain } from "./kmain/kmain.js";
-import { kpanel } from "./kpanel/kpanel.js";
-import { kcontr } from "./kcontr/kcontr.js";
-import { kmoment } from "./kmoment/kmoment.js";
-import { kview } from "./kview/kview.js";
-import { kcode } from "./kcode/kcode.js";
-import { card_album } from "./kcard/card_album.js";
-import { music_player } from "./ktool/music_player.js";
+import { kslide } from "/kui/kblog/kslide/kslide.js";
+import { kmain } from "/kui/kblog/kmain/kmain.js";
+import { kpanel } from "/kui/kblog/kpanel/kpanel.js";
+import { kcontr } from "/kui/kblog/kcontr/kcontr.js";
+import { kmoment } from "/kui/kblog/kmoment/kmoment.js";
+import { kview } from "/kui/kblog/kview/kview.js";
+import { kcode } from "/kui/kblog/kcode/kcode.js";
+import { card_album } from "/kui/kcard/card_album.js";
+import { music_player } from "/kui/ktool/music_player.js";
+import { card_progress } from "/kui/kcard/card_progress.js";
 
 const kui = {
   kslide,
@@ -18,6 +19,7 @@ const kui = {
   kcode,
   card_album,
   music_player,
+  card_progress,
 };
 
 const initializedElements = new WeakMap();

@@ -31,13 +31,7 @@ data.forEach((item, idx) => {
     Play("");
   });
 
-  list.appendChild(mitem);
-});
-
-open.addEventListener("click", () => {
-  name.classList.toggle("active");
-  open.classList.toggle("active");
-  list.classList.toggle("active");
+  list.append(mitem);
 });
 
 const Format = (seconds) => {
@@ -127,5 +121,11 @@ prev.addEventListener("click", Prev);
 toggle.addEventListener("click", Toggle);
 next.addEventListener("click", Next);
 progress.addEventListener("click", To);
+
+open.addEventListener("click", () => {
+  name.classList.toggle("active");
+  open.classList.toggle("active");
+  list.classList.toggle("active");
+});
 
 Play(index);

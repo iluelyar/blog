@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="寂世庭" />
-    <meta name="keywords" content="" />
+    <meta name="description" content="一个简洁的任务进度卡片组件，适用于项目管理和 UI 展示，含进度条、清单、优先级、状态和协作者。" />
+    <meta name="keywords" content="kui,kchart,kcard,ktool" />
     <meta name="author" content="K5938" />
-    <title>寂世庭 - KUI</title>
+    <title>任务进度卡片</title>
     <link rel="shortcut icon" href="/src/png/favicon.png" type="image/png" />
     <link rel="stylesheet" href="/kui/kui.css" />
     <script src="/kui/dom.js"></script>
@@ -16,14 +16,13 @@
       <kslide></kslide>
       <kmain>
         <kview>
-          <card_album></card_album>
-        </kview>
-        <kview>
-          <music_player></music_player>
-        </kview>
-        <kview>
           <card_progress></card_progress>
         </kview>
+        <kcode
+          data-html="/kui/kcard/card_progress.html"
+          data-css="/kui/kcard/card_progress.css"
+          data-js="/kui/kcard/progress_card.js"
+        ></kcode>
       </kmain>
       <kpanel></kpanel>
       <kcontr></kcontr>

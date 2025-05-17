@@ -33,7 +33,6 @@
 .music .music-li {
   grid-column: 1 / 6;
   width: 100%;
-  backdrop-filter: blur(8px);
   flex-wrap: wrap;
   flex-direction: row;
   align-content: flex-start;
