@@ -1,0 +1,71 @@
+kcode .kcode-wrapper {
+  display: grid;
+  gap: 8px;
+  overflow: auto;
+}
+
+kcode .kcode-block {
+  border: 1px solid #aaa;
+  border-radius: 16px;
+  font-family: JM;
+  font-size: 1em;
+  overflow: auto;
+}
+
+kcode .kcode-head {
+  height: 40px;
+  padding: 0 8px 0 16px;
+  border-bottom: 1px solid #aaa;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+kcode .kcode-circle {
+  display: flex;
+  gap: 8px;
+}
+kcode .kcode-circle span {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+}
+kcode .kcode-circle .kcode-red {
+  background: #ff5f56;
+}
+kcode .kcode-circle .kcode-yellow {
+  background: #ffbd2e;
+}
+kcode .kcode-circle .kcode-green {
+  background: #27c93f;
+}
+
+kcode .kcode-title {
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+kcode .kcode-action {
+  display: flex;
+  gap: 8px;
+}
+kcode .kcode-action button {
+  height: 24px;
+  padding: 0 8px;
+  border-radius: 8px;
+  border: 1px solid #aaa;
+  line-height: 24px;
+  font-size: 0.7em;
+  cursor: pointer;
+}
+
+kcode .kcode-body {
+  padding: 16px;
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-family: inherit;
+  font-size: inherit;
+}
+kcode .kcode-js{
+  display: none;
+}
