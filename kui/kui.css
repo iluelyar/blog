@@ -21,14 +21,14 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 4px;
-  height: 4px;
+  width: 8px;
+  height: 8px;
   display: none;
   cursor: pointer;
 }
 ::-webkit-scrollbar-thumb {
-  background: #fff;
-  border-radius: 4px;
+  background: #fff5;
+  border-radius: 8px;
 }
 
 ol,
@@ -39,6 +39,8 @@ input {
   background: none;
   outline: none;
   border: none;
+  color: inherit;
+  caret-color: inherit;
   font-family: JM, "宋体";
 }
 table {
