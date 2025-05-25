@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+* ::-webkit-scrollbar {
+  display: none;
+}
+
+@font-face {
+  font-family: "FangYuan";
+  src: url("/src/font/FangYuan.woff2") format("woff2"),
+    url("/src/font/FangYuan.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "JBMono";
+  src: url("/src/font/JBMono.woff2") format("woff2"),
+    url("/src/font/JBMono.woff") format("woff");
+  font-display: swap;
+}
+
+body {
+  min-width: 320px;
+  scroll-behavior: smooth;
+  font-size: 14px;
+  font-family: FangYuan;
+}
+
+/* blog */
+.blog {
+  width: 100%;
+  max-width: 1320px;
+  margin: auto;
+  padding: 8px;
+  display: grid;
+  grid-template-columns: 300px 1fr 300px;
+  gap: 16px;
+}
+.slide,
+.panel {
+  width: 300px;
+  height: calc(100vh - 16px);
+  padding: 40px 16px;
+  position: sticky;
+  top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow: auto;
+  z-index: 999;
+}
+.main {
+  height: calc(100vh - 16px);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.control {
+  width: 40px;
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  border: 1px solid #000;
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: 999;
+}
+.control .slide-btn,
+.control .panel-btn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  cursor: pointer;
+}
+.control .slide-btn img,
+.control .panel-btn img {
+  width: 24px;
+  height: 24px;
+  margin: auto;
+}
+
+@media (max-width: 720px) {
+  .blog {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .slide {
+    position: fixed;
+    left: -300px;
+  }
+  .panel {
+    position: fixed;
+    right: -300px;
+  }
+  .control .slide-btn,
+  .control .panel-btn {
+    display: flex;
+  }
+}
+
+@media (min-width: 721px) and (max-width: 1080px) {
+  .blog {
+    grid-template-columns: 300px 1fr;
+  }
+  .slide {
+    left: 8px;
+  }
+  .panel {
+    position: fixed;
+    right: -300px;
+  }
+  .control .slide-btn {
+    display: none;
+  }
+  .control .panel-btn {
+    display: flex;
+  }
+}
+
+@media (min-width: 1081px) {
+  .control {
+    display: none;
+  }
+}
