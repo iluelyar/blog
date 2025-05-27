@@ -51,22 +51,13 @@
     <div class="blog">
       <div class="slide">
         <k-author></k-author>
-        <k-nav
-          src="/src/icon"
-          columns="3"
-          borderColor="#000"
-          fill="#000"
-          size="20"
-          items='[
-            {"href":"/index.html","name":"menu"},
-            {"href":"/m.html","name":"moment"},
-            {"href":"/n.html","name":"note"},
-            {"href":"/v.html","name":"visual"},
-            {"href":"/d.html","name":"tool"},
-            {"href":"/p.html","name":"project"}
+        <k-nav></k-nav>
+        <k-search
+          data='[
+            { "title": "Track A", "link": "1.html" },
+            { "title": "Track B", "link": "2.html" }
           ]'
-        ></k-nav>
-        <k-search></k-search>
+        ></k-search>
       </div>
       <div class="main">
         <div class="error">
@@ -92,5 +83,61 @@
     </div>
     <script type="module" src="/kui/kui.js"></script>
     <script src="/src/js/index.js"></script>
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        document.querySelector("k-author").data = {
+          cover: "/src/image/bg.jpg",
+          avatar: "/src/image/avatar.png",
+          name: "K5938",
+          desc: "要么孤独，要么庸俗",
+        };
+
+        document.querySelector("k-nav").data = {
+          src: "/src/icon",
+          columns: 3,
+          borderColor: "#000",
+          iconFill: "#000",
+          iconSize: "20",
+          items: [
+            {
+              href: "/index.html",
+              name: "menu",
+              borderColor: "#f03",
+              iconFill: "#f30",
+            },
+            {
+              href: "/m.html",
+              name: "moment",
+              borderColor: "#034f40",
+              iconFill: "#20f420",
+            },
+            {
+              href: "/n.html",
+              name: "note",
+              borderColor: "#ff400f",
+              iconFill: "#0234ff",
+            },
+            {
+              href: "/v.html",
+              name: "visual",
+              borderColor: "#0f56f0",
+              iconFill: "#0f3fa0",
+            },
+            {
+              href: "/d.html",
+              name: "tool",
+              borderColor: "#0234f0",
+              iconFill: "#ff3410",
+            },
+            {
+              href: "/p.html",
+              name: "project",
+              borderColor: "#0421f0",
+              iconFill: "#43ff45",
+            },
+          ],
+        };
+      });
+    </script>
   </body>
 </html>

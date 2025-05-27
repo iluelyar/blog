@@ -21,10 +21,6 @@
             { "title": "Track B", "link": "2.html" }
           ]'
         ></k-search>
-        <k-search class="ks"></k-search>
-      </div>
-      <div class="main">main24352345aergfadfg上的敢死队风格</div>
-      <div class="panel">
         <k-music-player
           data='[
             { "name": "Track A", "src": "/m/music/1.ogg" },
@@ -33,6 +29,8 @@
           ]'
         ></k-music-player>
       </div>
+      <div class="main"></div>
+      <div class="panel"></div>
       <div class="control">
         <div class="slide-btn">
           <k-icon src="/src/icon" name="slider"></k-icon>
@@ -43,6 +41,7 @@
       </div>
     </div>
     <script type="module" src="/kui/kui.js"></script>
+    <script src="/src/js/index.js"></script>
     <script>
       window.addEventListener("DOMContentLoaded", () => {
         document.querySelector("k-author").data = {
@@ -97,13 +96,7 @@
             },
           ],
         };
-
-        document.querySelector("k-search.ks").data = [
-          { title: "Track C", link: "1.html" },
-          { title: "Track D", link: "2.html" },
-        ];
       });
     </script>
-    <script src="/src/js/index.js"></script>
   </body>
 </html>
