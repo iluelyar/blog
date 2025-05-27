@@ -51,6 +51,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  transition: left 0.3s ease, right 0.3s ease;
   overflow: auto;
   z-index: 999;
 }
@@ -75,13 +76,9 @@ body {
   width: 40px;
   height: 40px;
   display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
-}
-.control .slide-btn img,
-.control .panel-btn img {
-  width: 24px;
-  height: 24px;
-  margin: auto;
 }
 
 @media (max-width: 720px) {
