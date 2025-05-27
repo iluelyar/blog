@@ -45,6 +45,8 @@ body {
 .panel {
   width: 300px;
   height: calc(100vh - 16px);
+  background-color: #fff;
+  border-radius: 16px;
   position: sticky;
   top: 8px;
   display: flex;
