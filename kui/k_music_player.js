@@ -197,15 +197,6 @@ class MusicPlayer extends HTMLElement {
       this.ttime.textContent = isNaN(this.audio.duration)
         ? "00:00"
         : this.Format(this.audio.duration);
-
-      this.loopIcon.setAttribute(
-        "name",
-        this.isloop ? "listloop" : "singleloop"
-      );
-      this.toggleIcon.setAttribute(
-        "name",
-        this.audio.paused ? "pause" : "play"
-      );
     };
 
     this.Prev = () => {
@@ -218,12 +209,14 @@ class MusicPlayer extends HTMLElement {
       this.audio.currentTime = time;
       this.audio.play();
       this.isplay = true;
+      this.toggleIcon.setAttribute("name", "play");
       this.Update();
     };
 
     this.Pause = () => {
       this.audio.pause();
       this.isplay = false;
+      this.toggleIcon.setAttribute("name", "pause");
     };
 
     this.Toggle = () => {
@@ -244,7 +237,10 @@ class MusicPlayer extends HTMLElement {
 
     this.Loop = () => {
       this.isloop = !this.isloop;
-      this.Update();
+      this.loopIcon.setAttribute(
+        "name",
+        this.isloop ? "listloop" : "singleloop"
+      );
     };
 
     this.End = () => {
@@ -272,7 +268,7 @@ class MusicPlayer extends HTMLElement {
       this.listEl.classList.toggle("active");
     });
 
-    this.Play(this.index);
+    this.Update();
   }
 }
 
