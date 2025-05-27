@@ -7,23 +7,48 @@
     <meta name="keywords" content="kui,kchart,kcard,ktool" />
     <meta name="author" content="K5938" />
     <title>寂世庭 - 笔记</title>
-    <link rel="shortcut icon" href="/src/png/favicon.png" type="image/png" />
-    <link rel="stylesheet" href="/kui/kui.css" />
-    <script src="/kui/dom.js"></script>
+    <link rel="shortcut icon" href="/src/image/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/src/css/index.css" />
   </head>
   <body>
-    <div class="kblog">
-      <kslide></kslide>
-      <kmain></kmain>
-      <kpanel></kpanel>
-      <kcontr></kcontr>
+    <div class="blog">
+      <div class="slide">
+        <k-author
+          cover="/src/image/bg.jpg"
+          avatar="/src/image/avatar.png"
+          name="K5938"
+          desc="要么庸俗，要么孤独"
+          color="#fff"
+        ></k-author>
+        <k-nav
+          src="/src/icon"
+          columns="3"
+          borderColor="#000"
+          fill="#000"
+          size="20"
+          items='[
+            {"href":"/index.html","name":"menu"},
+            {"href":"/m.html","name":"moment"},
+            {"href":"/n.html","name":"note"},
+            {"href":"/v.html","name":"visual"},
+            {"href":"/d.html","name":"tool"},
+            {"href":"/p.html","name":"project"}
+          ]'
+        ></k-nav>
+        <k-search></k-search>
+      </div>
+      <div class="main"></div>
+      <div class="panel"></div>
+      <div class="control">
+        <div class="slide-btn">
+          <k-icon src="/src/icon" name="slider"></k-icon>
+        </div>
+        <div class="panel-btn">
+          <k-icon src="/src/icon" name="bar"></k-icon>
+        </div>
+      </div>
     </div>
-    <script type="module">
-      import { setup } from "/kui/kui.js";
-
-      window.addEventListener("DOMContentLoaded", async () => {
-        await setup();
-      });
-    </script>
+    <script type="module" src="/kui/kui.js"></script>
+    <script src="/src/js/index.js"></script>
   </body>
 </html>

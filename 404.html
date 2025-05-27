@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="404 - 在寂世庭的深处迷路了。" />
+    <meta name="description" content="404 - 在寂世庭的深处迷路了" />
     <meta name="keywords" content="kui,kchart,kcard,ktool" />
     <meta name="author" content="K5938" />
     <title>404 - 在寂世庭的深处迷路了</title>
-    <link rel="shortcut icon" href="/src/png/favicon.png" type="image/png" />
-    <link rel="stylesheet" href="/kui/kui.css" />
-    <script src="/kui/dom.js"></script>
+    <link rel="shortcut icon" href="/src/image/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/src/css/index.css" />
+
     <style>
       .error {
         width: 100%;
@@ -48,27 +48,49 @@
     </style>
   </head>
   <body>
-    <div class="kblog">
-      <kslide></kslide>
-      <div class="error">
-        <div class="inner">
-          <div class="error-404">404 - 在寂世庭的深处迷路了</div>
-          <div class="error-text">
-            于此寂世庭，幽静深远，时有未可及之地。汝误入一隅，寻不得其踪，或此地已化虚无，杳然难觅。
+    <div class="blog">
+      <div class="slide">
+        <k-author></k-author>
+        <k-nav
+          src="/src/icon"
+          columns="3"
+          borderColor="#000"
+          fill="#000"
+          size="20"
+          items='[
+            {"href":"/index.html","name":"menu"},
+            {"href":"/m.html","name":"moment"},
+            {"href":"/n.html","name":"note"},
+            {"href":"/v.html","name":"visual"},
+            {"href":"/d.html","name":"tool"},
+            {"href":"/p.html","name":"project"}
+          ]'
+        ></k-nav>
+        <k-search></k-search>
+      </div>
+      <div class="main">
+        <div class="error">
+          <div class="inner">
+            <div class="error-404">404 - 在寂世庭的深处迷路了</div>
+            <div class="error-text">
+              于此寂世庭，幽静深远，时有未可及之地。汝误入一隅，寻不得其踪，或此地已化虚无，杳然难觅。
+            </div>
+            <div class="error-btn" onclick="history.back()">返回上一页</div>
+            <div class="error-btn" onclick="location.href='/'">回到首页</div>
           </div>
-          <div class="error-btn" onclick="history.back()">返回上一页</div>
-          <div class="error-btn" onclick="location.href='/'">回到首页</div>
         </div>
       </div>
-      <kpanel></kpanel>
-      <kcontr></kcontr>
+      <div class="panel"></div>
+      <div class="control">
+        <div class="slide-btn">
+          <k-icon src="/src/icon" name="slider"></k-icon>
+        </div>
+        <div class="panel-btn">
+          <k-icon src="/src/icon" name="bar"></k-icon>
+        </div>
+      </div>
     </div>
-    <script type="module">
-      import { setup } from "/kui/kui.js";
-
-      window.addEventListener("DOMContentLoaded", async () => {
-        await setup();
-      });
-    </script>
+    <script type="module" src="/kui/kui.js"></script>
+    <script src="/src/js/index.js"></script>
   </body>
 </html>

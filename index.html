@@ -5,58 +5,105 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="寂世庭" />
     <meta name="keywords" content="kui,kchart,kcard,ktool" />
-    <meta name="author" content="卓承" />
+    <meta name="author" content="K5938" />
     <title>寂世庭</title>
     <link rel="shortcut icon" href="/src/image/favicon.png" type="image/png" />
     <link rel="stylesheet" href="/src/css/index.css" />
-    <script src="/src/js/index.js"></script>
   </head>
   <body>
     <div class="blog">
       <div class="slide">
-        <k-author
-          cover="/src/image/bg.jpg"
-          avatar="/src/image/avatar.png"
-          name="K5938"
-          desc="要么庸俗，要么孤独"
-          color="#fff"
-        >
-        </k-author>
-        <k-nav
-          src="/src/icon"
-          columns="3"
-          borderColor="#000"
-          fill="#000"
-          size="20"
-          items='[
-            {"href":"/index.html","name":"menu"},
-            {"href":"/index.html","name":"moment"},
-            {"href":"/index.html","name":"note"},
-            {"href":"/index.html","name":"visual"},
-            {"href":"/index.html","name":"tool"},
-            {"href":"/index.html","name":"project"}
+        <k-author></k-author>
+        <k-nav></k-nav>
+        <k-search
+          data='[
+            { "title": "Track A", "link": "1.html" },
+            { "title": "Track B", "link": "2.html" }
           ]'
-        >
-        </k-nav>
-        <k-search data="myData"></k-search>
+        ></k-search>
+        <k-search class="ks"></k-search>
       </div>
       <div class="main">main24352345aergfadfg上的敢死队风格</div>
-      <div class="panel">panel</div>
+      <div class="panel">
+        <k-music-player
+          data='[
+            { "name": "Track A", "src": "/m/music/1.ogg" },
+            { "name": "Track B", "src": "/m/music/2.ogg" },
+            { "name": "Track C", "src": "/m/music/3.ogg" }
+          ]'
+        ></k-music-player>
+      </div>
       <div class="control">
-        <div class="slide-btn" title="">
-          <img src="/src/icon/slider.svg" alt="slide" />
+        <div class="slide-btn">
+          <k-icon src="/src/icon" name="slider"></k-icon>
         </div>
-        <div class="panel-btn" title="">
-          <img src="/src/icon/bar.svg" alt="panel" />
+        <div class="panel-btn">
+          <k-icon src="/src/icon" name="bar"></k-icon>
         </div>
       </div>
     </div>
     <script type="module" src="/kui/kui.js"></script>
     <script>
-      window.myData = [
-        { title: "Apple", link: "#" },
-        { title: "Banana", link: "#" },
-      ];
+      window.addEventListener("DOMContentLoaded", () => {
+        document.querySelector("k-author").data = {
+          cover: "/src/image/bg.jpg",
+          avatar: "/src/image/avatar.png",
+          name: "K5938",
+          desc: "要么孤独，要么庸俗",
+        };
+
+        document.querySelector("k-nav").data = {
+          src: "/src/icon",
+          columns: 3,
+          borderColor: "#000",
+          iconFill: "#000",
+          iconSize: "20",
+          items: [
+            {
+              href: "/index.html",
+              name: "menu",
+              borderColor: "#f03",
+              iconFill: "#f30",
+            },
+            {
+              href: "/m.html",
+              name: "moment",
+              borderColor: "#034f40",
+              iconFill: "#20f420",
+            },
+            {
+              href: "/n.html",
+              name: "note",
+              borderColor: "#ff400f",
+              iconFill: "#0234ff",
+            },
+            {
+              href: "/v.html",
+              name: "visual",
+              borderColor: "#0f56f0",
+              iconFill: "#0f3fa0",
+            },
+            {
+              href: "/d.html",
+              name: "tool",
+              borderColor: "#0234f0",
+              iconFill: "#ff3410",
+            },
+            {
+              href: "/p.html",
+              name: "project",
+              borderColor: "#0421f0",
+              iconFill: "#43ff45",
+            },
+          ],
+        };
+
+        document.querySelector("k-search.ks").data = [
+          { title: "Track C", link: "1.html" },
+          { title: "Track D", link: "2.html" },
+        ];
+      });
     </script>
+    <script src="/src/js/index.js"></script>
   </body>
 </html>
