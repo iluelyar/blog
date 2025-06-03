@@ -74,8 +74,8 @@ class MusicPlayer extends HTMLElement {
         .music-li .music-item {
           display: inline-block;
           padding: 4px 8px;
-          border: 1px solid #fff;
-          border-radius: 4px;
+          background: #fff3;
+          border-radius: 8px;
           cursor: pointer;
         }
         .music-name.active {
@@ -115,7 +115,7 @@ class MusicPlayer extends HTMLElement {
           width: 40px;
           height: 40px;
           border-radius: 8px;
-          border: 1px solid #fff;
+          background: #fff3;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -199,6 +199,12 @@ class MusicPlayer extends HTMLElement {
         : this.Format(this.audio.duration);
     };
 
+    this.FU = () => {
+      this.audio.src = this.data[this.index].src;
+      this.nameEl.textContent = this.data[this.index].name;
+      this.ttime.textContent =  this.Format(this.audio.duration);
+    };
+
     this.Prev = () => {
       this.index = (this.index - 1 + this.data.length) % this.data.length;
       this.Play(0);
@@ -268,7 +274,7 @@ class MusicPlayer extends HTMLElement {
       this.listEl.classList.toggle("active");
     });
 
-    this.Update();
+    this.FU();
   }
 }
 
