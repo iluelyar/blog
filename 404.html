@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <meta name="description" content="404 - 在寂世庭的深处迷路了" />
+    <meta name="keywords" content="kui,kchart,kcard,ktool" />
+    <meta name="author" content="西北第一深情" />
+    <title>404 - 在寂世庭的深处迷路了</title>
+    <link rel="icon" href="/assets/favicon.ico" />
+    <link rel="stylesheet" href="/styles/reset.css" />
+    <link rel="stylesheet" href="/styles/index.css" />
+    <link rel="stylesheet" href="/styles/slide.css" />
+    <link rel="stylesheet" href="/styles/player.css" />
+    <style>
+      .error {
+        width: 100%;
+        height: calc(100vh - 16px);
+        display: flex;
+      }
+      .error .inner {
+        width: 340px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 140px auto;
+        gap: 16px 8px;
+      }
+      .error .inner .error-code {
+        grid-column: 1/3;
+        font-size: 2.4em;
+      }
+      .error .inner .error-text {
+        grid-column: 1/3;
+        font-size: 1.2em;
+      }
+      .error .inner .error-btn {
+        width: 140px;
+        height: 40px;
+        background: #ff8700;
+        border-radius: 40px;
+        line-height: 40px;
+        text-align: center;
+        cursor: pointer;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="blog">
+      <div class="slide">
+        <div class="author">
+          <img class="cover" src="/assets/img/cover.png" alt="cover" />
+          <img class="avatar" src="/assets/img/avatar.jpg" alt="avatar" />
+          <div class="name">西北第一深情</div>
+          <div class="desc">要么庸俗，要么孤独</div>
+        </div>
+        <div class="nav">
+          <a href="">
+            <div class="item">
+              <img src="/assets/icon/menu.svg" />
+            </div>
+          </a>
+          <a href="">
+            <div class="item">
+              <img src="/assets/icon/moment.svg" />
+            </div>
+          </a>
+          <a href="">
+            <div class="item">
+              <img src="/assets/icon/note.svg" />
+            </div>
+          </a>
+          <a href="">
+            <div class="item">
+              <img src="/assets/icon/visual.svg" />
+            </div>
+          </a>
+          <a href="">
+            <div class="item">
+              <img src="/assets/icon/tool.svg" />
+            </div>
+          </a>
+          <a href="">
+            <div class="item">
+              <img src="/assets/icon/project.svg" />
+            </div>
+          </a>
+        </div>
+        <div class="search">
+          <div class="search-box">
+            <div class="search-icon">
+              <img src="/assets/icon/search.svg" alt="" />
+            </div>
+            <input class="search-input" placeholder="搜索" />
+          </div>
+          <div class="search-result"></div>
+        </div>
+      </div>
+      <div class="main">
+        <div class="error">
+          <div class="inner">
+            <div class="error-code">404 - 迷失于寂世庭</div>
+            <div class="error-text">
+              此境幽邃，似有还无。君或行至虚实之界，所寻之地已化太虚，暂不可见矣。
+            </div>
+            <div class="error-btn" onclick="history.back()">溯洄寻踪</div>
+            <div class="error-btn" onclick="location.href='/'">归墟之门</div>
+          </div>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="kmp">
+          <audio></audio>
+          <div class="kmp-info">
+            <div class="kmp-img"></div>
+            <div class="kmp-name">Download...</div>
+          </div>
+          <div class="kmp-t">
+            <div class="kmp-ct">00:00</div>
+            <div class="kmp-tt">00:00</div>
+          </div>
+          <div class="kmp-prr">
+            <div class="kmp-bar"></div>
+          </div>
+          <div class="kmp-ctr">
+            <div class="kmp-loop">
+              <img src="/assets/icon/ll.svg" alt="" />
+            </div>
+            <div class="kmp-prev">
+              <img src="/assets/icon/prev.svg" alt="" />
+            </div>
+            <div class="kmp-toggle">
+              <img src="/assets/icon/pause.svg" alt="" />
+            </div>
+            <div class="kmp-next">
+              <img src="/assets/icon/next.svg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/scripts/kdom.js"></script>
+    <script src="/scripts/search.js"></script>
+    <script src="/scripts/player.js"></script>
+  </body>
+</html>
