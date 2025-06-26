@@ -4,17 +4,41 @@
   height: 100vh;
   margin: auto;
   padding: 16px;
-  display: grid;
-  grid-template-columns: 300px 1fr 300px;
+  display: flex;
+  justify-content: space-between;
   gap: 8px;
-  scroll-snap-align: start;
 }
 .slide,
 .panel {
+  width: 300px;
+  min-width: 300px;
   background-color: transparent;
   backdrop-filter: blur(8px);
   display: flex;
   flex-direction: column;
   gap: 8px;
   overflow: auto;
+}
+.main {
+  flex: 1;
+}
+.control {
+  padding: 0 8px;
+  border-radius: 56px;
+  background-color: #fff;
+  display: flex;
+  position: absolute;
+  left: 50%;
+  bottom: 32px;
+  transform: translate(-50%, 0);
+}
+.control div {
+  width: 48px;
+  height: 48px;
+  display: flex;
+}
+.control div img {
+  width: 24px;
+  height: 24px;
+  margin: auto;
 }

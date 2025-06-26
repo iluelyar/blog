@@ -27,9 +27,6 @@ body {
   height: 100vh;
   background-color: #f0f0f0;
   font-family: "FY", sans-serif;
-  scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
 }
 ::-webkit-scrollbar {
   width: 8px;
