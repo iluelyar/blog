@@ -3,17 +3,17 @@ let kmp_isloop = true;
 
 const kmp_data = [
   {
-    source: "/m/music/1.ogg",
+    source: "/m/1.ogg",
     src: "/assets/img/cover.png",
     name: "Music A",
   },
   {
-    source: "/m/music/2.ogg",
+    source: "/m/2.ogg",
     src: "/assets/img/cover.png",
     name: "Music B",
   },
   {
-    source: "/m/music/3.ogg",
+    source: "/m/3.ogg",
     src: "/assets/img/cover.png",
     name: "Music C",
   },
