@@ -27,12 +27,22 @@ body {
   height: 100vh;
   background-color: #f0f0f0;
   font-family: "FY", sans-serif;
+  transition: all 0.3s ease;
 }
+
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
   display: none;
 }
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #0003;
+  border-radius: 4px;
+}
+
 a {
   text-decoration: none;
   color: inherit;

@@ -3,17 +3,17 @@ let kmp_isloop = true;
 
 const kmp_data = [
   {
-    source: "/m/1.ogg",
+    source: "/folder/music/1.ogg",
     src: "/assets/img/cover.png",
     name: "Music A",
   },
   {
-    source: "/m/2.ogg",
+    source: "/folder/music/2.ogg",
     src: "/assets/img/cover.png",
     name: "Music B",
   },
   {
-    source: "/m/3.ogg",
+    source: "/folder/music/3.ogg",
     src: "/assets/img/cover.png",
     name: "Music C",
   },
@@ -40,11 +40,6 @@ const Format = (seconds) => {
   return `${minutes}:${secs}`;
 };
 
-const Load = () => {
-  kmp_img.style.backgroundImage = "url('" + kmp_data[kmp_i].src + "')";
-  kmp_name.textContent = kmp_data[kmp_i].name;
-};
-
 const Update = () => {
   kmp_bar.style.left = (audio.currentTime / audio.duration - 1) * 100 + "%";
 
@@ -52,8 +47,8 @@ const Update = () => {
   kmp_tt.textContent = isNaN(audio.duration) ? "00:00" : Format(audio.duration);
 
   kmp_loop_icon.src = kmp_isloop
-    ? "/assets/icon/ll.svg"
-    : "/assets/icon/sl.svg";
+    ? "/assets/icon/lloop.svg"
+    : "/assets/icon/sloop.svg";
   kmp_toggle_icon.src = audio.paused
     ? "/assets/icon/pause.svg"
     : "/assets/icon/play.svg";
@@ -66,9 +61,10 @@ const Prev = () => {
 
 const Play = (time = "0") => {
   audio.src = kmp_data[kmp_i].source;
+  kmp_img.style.backgroundImage = "url('" + kmp_data[kmp_i].src + "')";
+  kmp_name.textContent = kmp_data[kmp_i].name;
   audio.currentTime = time;
   audio.play();
-  Load();
 };
 
 const Pause = () => {
@@ -93,6 +89,7 @@ const To = (e) => {
 
 const Loop = () => {
   kmp_isloop = !kmp_isloop;
+  Update();
 };
 
 const End = () => {
@@ -114,4 +111,4 @@ kmp_toggle.addEventListener("click", Toggle);
 kmp_next.addEventListener("click", Next);
 kmp_prr.addEventListener("click", To);
 
-Play(0);
+Play();

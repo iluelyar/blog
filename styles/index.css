@@ -3,42 +3,76 @@
   max-width: 1320px;
   height: 100vh;
   margin: auto;
-  padding: 16px;
-  display: flex;
-  justify-content: space-between;
-  gap: 8px;
+  display: grid;
+  grid-template-columns: 300px 1fr 300px;
 }
 .slide,
 .panel {
   width: 300px;
-  min-width: 300px;
+  height: 100vh;
+  padding: 40px 16px;
   background-color: transparent;
   backdrop-filter: blur(8px);
   display: flex;
   flex-direction: column;
   gap: 8px;
+  transition: left 0.3s ease, right 0.3s ease;
   overflow: auto;
+  z-index: 888;
 }
 .main {
-  flex: 1;
+  padding: 16px;
+  overflow: auto;
 }
 .control {
-  padding: 0 8px;
-  border-radius: 56px;
+  border-radius: 8px;
   background-color: #fff;
   display: flex;
-  position: absolute;
+  position: fixed;
+  bottom: 16px;
   left: 50%;
-  bottom: 32px;
   transform: translate(-50%, 0);
+  z-index: 999;
 }
 .control div {
   width: 48px;
   height: 48px;
   display: flex;
+  cursor: pointer;
 }
 .control div img {
   width: 24px;
   height: 24px;
   margin: auto;
+}
+
+@media screen and (max-width: 766px) {
+  .blog {
+    grid-template-columns: 1fr;
+  }
+  .slide {
+    position: absolute;
+    left: -300px;
+  }
+  .panel {
+    position: absolute;
+    right: -300px;
+  }
+}
+@media (min-width: 767px) and (max-width: 1080px) {
+  .blog {
+    grid-template-columns: 300px 1fr;
+  }
+  .panel {
+    position: absolute;
+    right: -300px;
+  }
+  .control div.ctr-slide {
+    display: none;
+  }
+}
+@media screen and (min-width: 1081px) {
+  .control {
+    display: none;
+  }
 }

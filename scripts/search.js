@@ -2,11 +2,11 @@ const data = [
   {
     icon: "/assets/img/cover.png",
     title: "KChart 图表",
-    link: "/kchart",
+    link: "/design.html",
   },
-  { icon: "/assets/img/cover.png", title: "KCard 卡片", link: "/kcard" },
-  { icon: "/assets/img/cover.png", title: "KTool 工具", link: "/ktool" },
-  { icon: "/assets/img/cover.png", title: "KUI 组件库", link: "/kui" },
+  { icon: "/assets/img/cover.png", title: "KCard 卡片", link: "/design.html" },
+  { icon: "/assets/img/cover.png", title: "KTool 工具", link: "/tool.html" },
+  { icon: "/assets/img/cover.png", title: "KUI 组件库", link: "/design.html" },
 ];
 
 const i = _(".search-input");
@@ -26,7 +26,7 @@ function render(list = []) {
   const keyword = i.value.trim().toLowerCase();
 
   if (!list.length) {
-    list = [{ icon: "/assets/icon/wh.svg", title: "未找到结果", link: "" }];
+    list = [{ icon: "/assets/icon/question.svg", title: "未找到结果", link: "" }];
   }
 
   list.forEach((item) => {
