@@ -1,7 +1,4 @@
 .blog {
-  width: 100%;
-  max-width: 1320px;
-  height: 100vh;
   margin: auto;
   display: grid;
   grid-template-columns: 300px 1fr 300px;
