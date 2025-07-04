@@ -17,12 +17,12 @@
   flex-direction: column;
   gap: 8px;
   transition: left 0.3s ease, right 0.3s ease;
-  overflow: auto;
+  overflow-y: auto;
   z-index: 888;
 }
 .main {
   padding: 16px;
-  overflow: auto;
+  overflow-y: auto;
 }
 .control {
   border-radius: 8px;
@@ -46,7 +46,7 @@
   margin: auto;
 }
 
-@media screen and (max-width: 766px) {
+@media (max-width: 766px) {
   .blog {
     grid-template-columns: 1fr;
   }
@@ -71,7 +71,7 @@
     display: none;
   }
 }
-@media screen and (min-width: 1081px) {
+@media (min-width: 1081px) {
   .control {
     display: none;
   }
