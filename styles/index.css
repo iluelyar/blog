@@ -19,8 +19,9 @@
   z-index: 888;
 }
 .main {
+  height: 100vh;
   padding: 16px;
-  overflow-y: auto;
+  overflow: auto;
 }
 .control {
   border-radius: 8px;
