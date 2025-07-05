@@ -3,6 +3,7 @@
   margin: auto;
   display: grid;
   grid-template-columns: 300px 1fr 300px;
+  gap: 0;
 }
 .slide,
 .panel {
@@ -21,6 +22,8 @@
 .main {
   height: 100vh;
   padding: 16px;
+  display: grid;
+  gap: 8px;
   overflow: auto;
 }
 .control {
