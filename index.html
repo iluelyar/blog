@@ -1,17 +1,47 @@
 <!DOCTYPE html>
-<html lang="zh">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="寂世庭" />
-    <meta name="keywords" content="kui,kchart,kcard,ktool" />
-    <meta name="author" content="西北第一深情" />
-    <title>寂世庭</title>
-    <link rel="icon" href="/favicon.ico" />
-    <script type="module" crossorigin src="/assets/index-a2e8ccc3.js"></script>
-    <link rel="stylesheet" href="/assets/index-11e45df0.css">
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="寂世庭" />
+  <meta name="keywords" content="kui,kchart,kcard,ktool" />
+  <meta name="author" content="西北第一深情" />
+  <title>寂世庭</title>
+  <link rel="icon" href="/favicon.ico" />
+</head>
+
+<body>
+  <button onclick="lockOrientation('portrait')">竖屏</button>
+  <button onclick="lockOrientation('landscape')">横屏</button>
+  <div>q23454tryr1wtsrgkfhjgdfgsa</div>
+  <div id="root"></div>
+  <!-- <script type="module" src="/src/main.jsx"></script> -->
+  <script>
+    async function setOrientation(mode) {
+      try {
+        // 1. 检查是否支持
+        if (!screen.orientation || !screen.orientation.lock) {
+          alert("当前设备不支持强制切换横竖屏，请手动旋转。");
+          return;
+        }
+
+        // 2. 如果不是全屏，先请求全屏
+        if (!document.fullscreenElement) {
+          await document.documentElement.requestFullscreen();
+        }
+
+        // 3. 切换方向
+        await screen.orientation.lock(mode);
+        console.log(`已切换到：${mode}`);
+      } catch (err) {
+        console.error("切换失败:", err);
+        alert("无法切换方向，请检查浏览器支持或系统设置。");
+      }
+    }
+  </script>
+
+
+</body>
+
 </html>
