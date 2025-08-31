@@ -12,36 +12,8 @@
 </head>
 
 <body>
-<button onclick="setOrientation('landscape')">横屏</button>
-<button onclick="setOrientation('portrait')">竖屏</button>
-  <div>q23454tryr1wtsrgkfhjgdfgsa</div>
   <div id="root"></div>
-  <!-- <script type="module" src="/src/main.jsx"></script> -->
-  <script>
-    async function setOrientation(mode) {
-      try {
-        // 1. 检查是否支持
-        if (!screen.orientation || !screen.orientation.lock) {
-          alert("当前设备不支持强制切换横竖屏，请手动旋转。");
-          return;
-        }
-
-        // 2. 如果不是全屏，先请求全屏
-        if (!document.fullscreenElement) {
-          await document.documentElement.requestFullscreen();
-        }
-
-        // 3. 切换方向
-        await screen.orientation.lock(mode);
-        console.log(`已切换到：${mode}`);
-      } catch (err) {
-        console.error("切换失败:", err);
-        alert("无法切换方向，请检查浏览器支持或系统设置。");
-      }
-    }
-  </script>
-
-
+  <script type="module" src="/src/main.jsx"></script>
 </body>
 
 </html>
